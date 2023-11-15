@@ -22,8 +22,8 @@ contract ErrorHandler {
     }
 
     function revertExample(uint _x) public pure returns (uint) {
-        if (_x < 8) {
-            revert("Value must be greater than or equal to 8"); // Use revert to revert and provide an error message
+        if (_x == 8) {
+            revert("Value must not be equal to 8"); // Use revert to revert and provide an error message
         }
         return _x;
     }
